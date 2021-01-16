@@ -3,7 +3,8 @@ package jp.ac.uryukyu.ie.e205719;
 public class Fight {
 
     /**
-     * ジャンケンを行う動作するメソッド
+     * 実際にジャンケンの動きを行うメソッド
+     * 何度もジャンケンを繰り返す。「END」を入力すると終了する。
      */
     public void fight(){
         String playerhand;
@@ -32,6 +33,7 @@ public class Fight {
                 System.out.printf("正しく入力してください\n再度入力をお願いします。\n");
             }
         }
+        out.result();
         System.out.println("終わり");
     }    
 }

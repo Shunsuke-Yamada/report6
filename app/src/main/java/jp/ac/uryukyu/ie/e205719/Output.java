@@ -1,6 +1,7 @@
 package jp.ac.uryukyu.ie.e205719;
 
 public class Output{
+    Count count = new Count();
 
     /**
      * プレイヤーが出した手を出力するメソッド
@@ -26,9 +27,9 @@ public class Output{
     }
 
     /**
-     * 戦績を出力するメソッド
+     * 成績を出力するメソッド
      */
     public void result(){
-        System.out.println("あなたの戦績は０勝０負０引き分け(仮)です。");
+        System.out.println("あなたの成績は" + count.getCountWin() + "勝" + count.getCountLose() + "負" + count.getCountDraw() + "引き分けです。");
     }
 }
