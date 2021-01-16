@@ -2,6 +2,12 @@ package jp.ac.uryukyu.ie.e205719;
 
 public class Judge {
 
+    /**
+     * ジャンケンの勝敗を判定するメソッド
+     * プレイヤーと敵の出した手を受け取ってジャンケンの勝敗を返す
+     * @param playerhand プレイヤーの出した手
+     * @param enemyhand　敵が出した手
+     */
     public void judge(String playerhand, String enemyhand){
 
         if(playerhand.equals("グー") && enemyhand.equals("グー")){
@@ -32,9 +38,7 @@ public class Judge {
             System.out.println("Draw");
         }
         else{
-            System.out.println("判定不可");
         }
     }
-
 }
     
