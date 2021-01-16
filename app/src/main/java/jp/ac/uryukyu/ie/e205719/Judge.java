@@ -1,18 +1,40 @@
 package jp.ac.uryukyu.ie.e205719;
 
-import java.util.Random;
-
 public class Judge {
-    
-    /**
-     * 敵の手をランダムで出すメソッド
-     * @return　enemyhand 敵の出した手
-     */
-    public String enemy(){
-        String[] hands = { "グー", "チョキ", "パー" };
-        Random r = new Random();
-        String enemyhand = hands[r.nextInt(3)];
-        return enemyhand;
+
+    public void judge(String playerhand, String enemyhand){
+
+        if(playerhand.equals("グー") && enemyhand.equals("グー")){
+            System.out.println("Draw");
+        }
+        else if(playerhand.equals("グー") && enemyhand.equals("チョキ")){
+            System.out.println("player Win");
+        }
+        else if(playerhand.equals("グー") && enemyhand.equals("パー")){
+            System.out.println("enemy Win");
+        }
+        else if(playerhand.equals("チョキ") && enemyhand.equals("グー")){
+            System.out.println("enemy Win");
+        }
+        else if(playerhand.equals("チョキ") && enemyhand.equals("チョキ")){
+            System.out.println("Draw");
+        }
+        else if(playerhand.equals("チョキ") && enemyhand.equals("パー")){
+            System.out.println("player Win");
+        }
+        else if(playerhand.equals("パー") && enemyhand.equals("グー")){
+            System.out.println("player Win");
+        }
+        else if(playerhand.equals("パー") && enemyhand.equals("チョキ")){
+            System.out.println("enemy Win");
+        }
+        else if(playerhand.equals("パー") && enemyhand.equals("パー")){
+            System.out.println("Draw");
+        }
+        else{
+            System.out.println("判定不可");
+        }
     }
+
 }
     

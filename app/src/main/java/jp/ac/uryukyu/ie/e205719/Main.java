@@ -8,12 +8,15 @@ public class Main {
 
         Input in = new Input();
         Output out = new Output();
-        Judge judge  = new Judge();
+        Enemy enemy  = new Enemy();
+        Judge judge = new Judge();
 
-        playerhand = in.inPut(); 
-        enemyhand = judge.enemy();
+        playerhand = in.playerInPut(); 
+        enemyhand = enemy.enemyInPut();
 
         out.playerOutPut(playerhand);
         out.enemyOutPut(enemyhand);
+
+        judge.judge(playerhand,enemyhand);
     }
 }
