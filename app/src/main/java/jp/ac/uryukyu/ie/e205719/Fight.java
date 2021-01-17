@@ -9,6 +9,7 @@ public class Fight {
     public void fight(){
         String playerhand;
         String enemyhand;
+        String judgeResult;
 
         Input in = new Input();
         Output out = new Output();
@@ -24,7 +25,8 @@ public class Fight {
             if(playerhand.equals("グー") || playerhand.equals("チョキ") || playerhand.equals("パー")){
                 out.playerOutPut(playerhand);
                 out.enemyOutPut(enemyhand);
-                judge.judge(playerhand,enemyhand);
+                judgeResult = judge.judge(playerhand,enemyhand);
+                System.out.println(judgeResult);
             }
             else if(playerhand.equals("END")){
                 break;

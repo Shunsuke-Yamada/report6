@@ -2,45 +2,47 @@ package jp.ac.uryukyu.ie.e205719;
 
 public class Judge {
     Count count = new Count();
+    String str;
     /**
      * ジャンケンの勝敗を判定するメソッド
      */
-    public void judge(String playerhand, String enemyhand){
+    public String judge(String playerhand, String enemyhand){
         if(playerhand.equals("グー") && enemyhand.equals("グー")){
-            System.out.println("引き分け");
             count.countDraw();
+            str = "引き分け";
         }
         else if(playerhand.equals("グー") && enemyhand.equals("チョキ")){
-            System.out.println("勝ち");
             count.countWin();
+            str = "勝ち";
         }
         else if(playerhand.equals("グー") && enemyhand.equals("パー")){
-            System.out.println("負け");
             count.countLose();
+            str = "負け";
         }
         else if(playerhand.equals("チョキ") && enemyhand.equals("グー")){
-            System.out.println("負け");
             count.countLose();
+            str = "負け";
         }
         else if(playerhand.equals("チョキ") && enemyhand.equals("チョキ")){
-            System.out.println("引き分け");
             count.countDraw();
+            str = "引き分け";
         }
         else if(playerhand.equals("チョキ") && enemyhand.equals("パー")){
-            System.out.println("勝ち");
             count.countWin();
+            str = "勝ち";
         }
         else if(playerhand.equals("パー") && enemyhand.equals("グー")){
-            System.out.println("勝ち");
             count.countWin();
+            str = "勝ち";
         }
         else if(playerhand.equals("パー") && enemyhand.equals("チョキ")){
-            System.out.println("負け");
             count.countLose();
+            str = "負け";
         }
         else if(playerhand.equals("パー") && enemyhand.equals("パー")){
-            System.out.println("引き分け");
             count.countDraw();
+            str = "引き分け";
         }
+        return str;
     }
 }
